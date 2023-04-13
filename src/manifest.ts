@@ -1,4 +1,4 @@
-import { defineManifest } from '@crxjs/vite-plugin'
+import { defineManifest } from '@crxjs/vite-plugin';
 
 export default defineManifest({
   name: 'create-chrome-ext',
@@ -32,9 +32,9 @@ export default defineManifest({
       matches: [],
     },
     {
-      resources: ['js/nostr-provider.js'],
+      resources: ['js/nip07-provider.js'],
       matches: ['https://*/*', 'http://localhost:*/*'],
     },
   ],
-  permissions: [],
-})
+  permissions: ['storage', 'tabs', 'activeTab'],
+});
